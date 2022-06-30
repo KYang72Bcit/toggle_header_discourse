@@ -1,0 +1,59 @@
+<script>
+    window.onload = function () {
+           document.querySelector(".search-input").style.display = "none";
+       }
+
+       window.addEventListener("scroll", function () {
+           let frame = document.querySelector("header");
+           let distance = window.pageYOffset + frame.scrollTop;
+
+           if (distance > 30) {
+               document.querySelector("header").classList.add("change-header");
+               if (document.querySelector(".login-button")) {
+                   document.querySelector(".login-button").classList.add("change-button");
+               }
+
+
+           } else {
+               document.querySelector("header").classList.remove("change-header");
+               if (document.querySelector(".login-button")) {
+                   document.querySelector(".login-button").classList.remove("change-button");
+               }
+           }
+
+
+       })
+
+       window.addEventListener("scroll", toggleSearch)
+
+       function toggleSearch() {
+           let frame = document.querySelector("header");
+           let distance = window.pageYOffset + frame.scrollTop;
+           let joinBannerHeight = 0;
+           let searchBannerHeight = 0
+
+           if (document.querySelector(".join-conversation-container")) {
+               joinBannerHeight = document.querySelector(".join-conversation-container").clientHeight;
+               //console.log(" joinBannerHeight " +  joinBannerHeight);
+           }
+           if (document.querySelector(".custom-search-banner")) {
+               searchBannerHeight = document.querySelector(".custom-search-banner").clientHeight;
+               //console.log(" searchBannerHeight " +  searchBannerHeight);
+           }
+
+           let triggle = document.querySelector(".d-header").clientHeight + joinBannerHeight + 0.4 *
+               searchBannerHeight;
+           //console.log("triggle" + triggle);
+           //console.log("distance" + distance);
+
+           if (distance < triggle) {
+               document.querySelector(".search-input").style.display = "none";
+
+           } else {
+               document.querySelector(".search-input").style.display = "block";
+               //console.log("search bar display");
+           }
+
+       }
+     
+   </script>

@@ -1,0 +1,47 @@
+//remove the hamberger menu, remove sign-up button
+//slightly change the log-in button
+//remove svg logo in button
+//add color for changing background
+
+a#toggle-hamburger-menu{
+    display:none;
+}
+
+.d-header {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.01);
+}
+
+// the original setting, with a shadow
+
+// .d-header {
+//   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+// }
+
+
+button.sign-up-button{
+    display:none;
+}
+.d-header .login-button{
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    border-radius: 4px !important;
+    font-weight:700;
+}
+
+.d-header .login-button > svg{
+    display:none;
+}
+.change-header{
+    background:var(--tertiary);
+    transition: ease 0.25s
+}
+.change-button{
+    background:var(--secondary);
+    color:var(--tertiary) ;
+    transition: ease 0.25s
+}
+
+.search-input{
+    display:none;
+    background:var(--secondary);
+}
+
