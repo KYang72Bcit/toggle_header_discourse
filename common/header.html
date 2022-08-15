@@ -60,10 +60,9 @@
        }
 
        const user = api.getCurrentUser();
-       console.log("user", user);
       if (user && user.admin) {
         api.addQuickAccessProfileItem({
-          icon: "far-book",
+          icon: "book",
           href: `/review`,
           content: `Review (${user.reviewable_count})`,
         });

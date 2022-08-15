@@ -1,4 +1,4 @@
 svg_icons:
-  default: 'far-book'
+  default: 'book'
   type: 'list'
   list_type: 'compact'
