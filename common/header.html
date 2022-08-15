@@ -1,4 +1,4 @@
-<script>
+<script type="text/discourse-plugin" version="0.8">
     window.onload = function () {
            document.querySelector(".search-input").style.display = "none";
        }
@@ -55,5 +55,14 @@
            }
 
        }
+
+       const user = api.getCurrentUser();
+      if (user && user.admin) {
+        api.addQuickAccessProfileItem({
+          icon: "fa-book",
+          href: `/review`,
+          content: "Review",
+        });
+      }
      
    </script>
