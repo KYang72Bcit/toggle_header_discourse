@@ -1,6 +1,9 @@
 <script type="text/discourse-plugin" version="0.8">
     window.onload = function () {
+        const search = document.querySelector(".search-input");
+        if(search){
            document.querySelector(".search-input").style.display = "none";
+        }
        }
 
        window.addEventListener("scroll", function () {
@@ -60,7 +63,7 @@
        console.log("user", user);
       if (user && user.admin) {
         api.addQuickAccessProfileItem({
-          icon: "fa-book",
+          icon: "far-book",
           href: `/review`,
           content: "Review",
         });
