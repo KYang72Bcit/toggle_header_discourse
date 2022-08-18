@@ -13,6 +13,7 @@
                }
 
                if (document.querySelector(".subscribe-for-member")) {
+                console.log("subscribe", document.querySelector(".subscribe-for-member"));
                 document.querySelector(".subscribe-for-member").classList.add("change-button");
             }
 
@@ -22,6 +23,9 @@
                if (document.querySelector(".login-button")) {
                    document.querySelector(".login-button").classList.remove("change-button");
                }
+               if (document.querySelector(".subscribe-for-member")) {
+                document.querySelector(".subscribe-for-member").classList.remove("change-button");
+            }
            }
 
 
