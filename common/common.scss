@@ -35,8 +35,8 @@ button.sign-up-button{
     transition: ease 0.25s
 }
 .change-button{
-    background:var(--secondary);
-    color:var(--tertiary) ;
+    background:var(--secondary) !important;
+    color:var(--tertiary) !important;
     transition: ease 0.25s
 }
 
